@@ -116,7 +116,7 @@ Item {
     // the label if requested
     PlasmaComponents.Label {
         id: label
-        width: parent.width - (Math.min(canvas.height, canvas.width) / 2.03 - Math.min(canvas.height, canvas.width) / 3.5) * 2
+        width: parent.width  // - (Math.min(canvas.height, canvas.width) / 2.03 - Math.min(canvas.height, canvas.width) / 3.5) * 2  // MvdS
         horizontalAlignment: Text.AlignHCenter
         elide: Text.ElideRight
 
@@ -130,6 +130,10 @@ Item {
             ? Font.SmallCaps
             : Font.MixedCase
 
+	// Use a small, bold font:
+	font.pixelSize: 11  // MvdS
+	font.weight: Font.Bold  // MvdS
+	
         // the value
         text: Utils.get_label(plasmoid.configuration, orig_values)
     }

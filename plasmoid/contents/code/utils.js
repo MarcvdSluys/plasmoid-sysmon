@@ -16,7 +16,7 @@
  */
 
 function to_string(value) {
-    return Number(value).toLocaleString(Qt.locale(), "f")
+    return Number(value).toLocaleString(Qt.locale(), "f", 0)  // MvdS: precision: 0 decimals (default=2)
 }
 
 function format_number(conf, value) {
